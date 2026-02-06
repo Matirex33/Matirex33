@@ -47,4 +47,12 @@ void mostrar(char const tablero[][3],int const tam);
  */
 bool comprobar(int const v[],int const tam);
 
+
+/**
+ * @brief vacia la matriz del tablero
+ * @param tablero
+ * @param tam
+ */
+void reiniciar(char tablero[][3],int const tam);
+
 #endif //MATIREX33_FUNCIONES_H
