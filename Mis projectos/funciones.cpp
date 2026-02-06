@@ -29,7 +29,7 @@ void posiciones2(char tablero[][3], int jugador2[], int tam) {
 void reiniciar(char tablero[][3], int const tam) {
     for (int i = 0; i < tam; i++) {
         for (int j = 0; j < tam; j++) {
-            tablero[i][j] = 'V';
+            tablero[i][j] = ' ';
         }
     }
 }

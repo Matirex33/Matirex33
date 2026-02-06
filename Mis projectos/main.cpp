@@ -32,7 +32,7 @@ int main() {
     ImGui_ImplOpenGL3_Init("#version 150");
 
     // --- VARIABLES DEL JUEGO (Persistentes) ---
-    char tablero[3][3] = {{'V','V','V'},{'V','V','V'},{'V','V','V'}};
+    char tablero[3][3] = {{' ',' ',' '},{' ',' ',' '},{' ',' ',' '}};
     int jugador1[3] = {0, 0, 0};
     int jugador2[3] = {0, 0, 0};
     int turnos1 = 0, turnos2 = 0;
@@ -61,7 +61,7 @@ int main() {
 
                 if (ImGui::Button(etiqueta.c_str(), ImVec2(80, 80))) {
                     // Solo permitimos jugar si la casilla está vacía ('V') y nadie ha ganado
-                    if (tablero[i][j] == 'V' && !ganado) {
+                    if (tablero[i][j] == ' ' && !ganado) {
                         int pos = (i + 1) * 10 + (j + 1); // Conversión a tu formato de lógica
 
                         if (turnoJ1) {

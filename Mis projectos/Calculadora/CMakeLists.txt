@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 4.0)
-project(TresEnRaya)
+project(Calculadora)
 
 # 1. Configuración del estándar de C++
 set(CMAKE_CXX_STANDARD 17)
@@ -29,30 +29,23 @@ set_source_files_properties(${MACOS_ICON} PROPERTIES MACOSX_BUNDLE_LOCATION Reso
 
 # 6. CREAR EL EJECUTABLE (Target)
 # Incluimos tus archivos, los de ImGui y el icono
-add_executable(MiProyectoGui
+add_executable(Calculadora
         main.cpp
         funciones.cpp
         ${IMGUI_SOURCES}
-        ${MACOS_ICON}
 )
 
-# 7. Configurar las propiedades del Bundle de macOS (.app)
-set_target_properties(MiProyectoGui PROPERTIES
-        MACOSX_BUNDLE TRUE
-        MACOSX_BUNDLE_ICON_FILE "AppIcon.icns"
-        MACOSX_BUNDLE_GUI_IDENTIFIER "com.matias.tresenraya"
-        MACOSX_BUNDLE_BUNDLE_NAME "Tres En Raya"
-)
+
 
 # 8. Directorios de inclusión (Cabeceras)
-target_include_directories(MiProyectoGui PRIVATE
+target_include_directories(Calculadora PRIVATE
         ${CMAKE_CURRENT_SOURCE_DIR}
         ${IMGUI_DIR}
         ${IMGUI_DIR}/backends
 )
 
 # 9. Vinculación de librerías y Frameworks de Apple
-target_link_libraries(MiProyectoGui PRIVATE
+target_link_libraries(Calculadora PRIVATE
         glfw
         "-framework Cocoa"
         "-framework IOKit"
