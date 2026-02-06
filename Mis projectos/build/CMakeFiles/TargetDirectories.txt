@@ -1,0 +1,3 @@
+/Users/matias/CLionProjects/Matirex33/Mis projectos/build/CMakeFiles/MiProyectoGui.dir
+/Users/matias/CLionProjects/Matirex33/Mis projectos/build/CMakeFiles/edit_cache.dir
+/Users/matias/CLionProjects/Matirex33/Mis projectos/build/CMakeFiles/rebuild_cache.dir
